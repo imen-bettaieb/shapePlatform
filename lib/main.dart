@@ -8,11 +8,8 @@ void main() {
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    var t = AppLocalizations.of(context);
-    print("bjr");
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: [
@@ -21,11 +18,47 @@ class MainApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
-        Locale('en'),
-        Locale('fr'),
+      supportedLocales: AppLocalizations.supportedLocales,
+      home: TextWidget(),
+    );
+  }
+}
+
+class TextWidget extends StatelessWidget {
+  final String? title;
+  const TextWidget({super.key, this.title});
+  @override
+  Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context)!;
+    return Text(t.hello);
+  }
+}
+
+  /*@override
+  Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context);
+    //print("bjr");
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
       ],
+      supportedLocales: AppLocalizations.supportedLocales,
       home: Text(t?.hello ?? "Hi"),
     );
   }
 }
+
+class TextWidget extends StatelessWidget {
+  final String? title;
+  const TextWidget({super.key, this.title});
+  @override
+  Widget build(BuildContext context) {
+    var t = AppLocalizations.of(context);
+    return Text(t?.hello ?? "Hi");
+  }
+}
+*/
