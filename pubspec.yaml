@@ -12,7 +12,10 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
-  #shared_preferences: 2.0.18
+  http:
+  flutter_bloc:
+  shared_preferences: 2.0.18
+  equatable:
 
 dev_dependencies:
   flutter_test:
