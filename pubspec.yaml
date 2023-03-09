@@ -16,6 +16,7 @@ dependencies:
   flutter_bloc:
   shared_preferences: 2.0.18
   equatable:
+  google_fonts:
 
 dev_dependencies:
   flutter_test:
@@ -25,3 +26,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/images/
+    - assets/logo/
+  fonts:
+    - family: Segoe
+      fonts:
+        - asset: assets/fonts/Segoe-Bold.ttf

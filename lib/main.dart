@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:shape_platform/ui/auth/get_users.dart';
-import 'package:shape_platform/ui/auth/login.dart';
+import 'package:shape_platform/ui/auth/screen/login.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,10 +13,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Segoe'),
       initialRoute: '/',
       routes: {
         '/': (context) => LoginScreen(),
-        'getUser': (context) => getUser(),
+        //'getUser': (context) => getUser(),
         //'addUser': (context) => postUser(),
       },
       localizationsDelegates: [
